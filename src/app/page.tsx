@@ -4,26 +4,35 @@ import { AnimatedTooltip } from "@/components/ui/AnimatedTooltip";
 import { Spotlight } from "@/components/ui/Spotlight";
 import dynamic from "next/dynamic";
 
+const ServiceSection = dynamic(
+  () => import("@/components/home/ServiceSection"),
+  {
+    ssr: false,
+  }
+);
 
-const ServiceSection = dynamic(() => import("@/components/home/ServiceSection"), {
-  ssr: false
-})
+const PortfolioSection = dynamic(
+  () => import("@/components/home/PortfolioSection"),
+  {
+    ssr: false,
+  }
+);
 
-const PortfolioSection = dynamic(() => import("@/components/home/PortfolioSection"), {
-  ssr: false
-})
+const PricingSection = dynamic(
+  () => import("@/components/home/PricingSection"),
+  {
+    ssr: false,
+  }
+);
 
-const PricingSection = dynamic(() => import("@/components/home/PricingSection"), {
-  ssr: false
-})
-
-
-const TestimonialSection = dynamic(() => import("@/components/home/TestimonialSection"), {
-  ssr: false
-})
+const TestimonialSection = dynamic(
+  () => import("@/components/home/TestimonialSection"),
+  {
+    ssr: false,
+  }
+);
 
 export default function Home() {
-
   const people = [
     {
       id: 1,
@@ -73,28 +82,35 @@ export default function Home() {
     <main className="w-full    pt-8 text-white  min-h-screen bg-black">
       <div className="bg-grid-white/[0.1] overflow-hidden relative container mx-auto w-full pb-8">
         <Spotlight fill="#8B5CF6" />
-        <h1 className="text-6xl leading-normal  font-bold">
+        <h1 className="text-4xl lg:text-6xl leading-normal  font-bold">
           We develop <br />
-          <span className="bg-gradient-to-r from-purple-300 to-primary bg-clip-text text-transparent">amazing</span> Websites <br /> for your business <span className="bg-gradient-to-r from-purple-300 to-primary bg-clip-text text-transparent">.</span>
+          <span className="bg-gradient-to-r from-purple-300 to-primary bg-clip-text text-transparent">
+            amazing
+          </span>{" "}
+          Websites <br /> for your business{" "}
+          <span className="bg-gradient-to-r from-purple-300 to-primary bg-clip-text text-transparent">
+            .
+          </span>
         </h1>
-        <p className="text-sm w-full lg:w-[60%] text-stone-300 leading-5 mt-5">Discover our semaless workflow as we transform Figma designs into stunning  webflow websites . Explore the synergy between design and development for a  pixel-perfect online experience</p>
-        <div className="mt-5 flex items-center space-x-4">
-
-          <button className="p-[3px] relative">
+        <p className="text-sm w-full lg:w-[60%] text-stone-300 leading-5 mt-5">
+          Discover our semaless workflow as we transform Figma designs into
+          stunning webflow websites . Explore the synergy between design and
+          development for a pixel-perfect online experience
+        </p>
+        <div className="mt-5 lg:flex-row flex-col-reverse flex lg:items-center  lg:space-x-4">
+          <button className="p-[3px] relative mt-4 lg:mt-0">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-            <div className="px-8 py-2 text-sm bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+            <div className="px-8 py-2 text-sm bg-black rounded-[6px]   relative group transition duration-200 text-white hover:bg-transparent">
               View Work
             </div>
           </button>
 
-          <div className="flex flex-row items-center justify-center">
+          <div className="flex flex-row items-center justify-center ">
             <AnimatedTooltip items={people} />
           </div>
-
         </div>
 
         <Spotlight fill="#8B5CF6" className="absolute left-[80%] top-0" />
-
       </div>
 
       <div className="mt-16 overflow-hidden flex flex-col items-center">
