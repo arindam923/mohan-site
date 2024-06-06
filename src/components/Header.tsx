@@ -36,7 +36,9 @@ const Header = () => {
   return (
     <header className="w-full bg-black border-neutral-800 text-white flex items-center justify-between border-b px-4 py-2">
       <div className="flex items-center space-x-2">
-        <MobileMenu />
+        <div className="lg:hidden">
+          <MobileMenu />
+        </div>
         <h2 className="text-2xl font-semibold">
           Rev<span className="text-purple-600">V</span>Trex
         </h2>
