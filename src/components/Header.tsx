@@ -14,22 +14,22 @@ const Header = () => {
     {
       id: 0,
       name: "Why Us",
-      href: "/",
+      href: "/why-us",
     },
     {
       id: 1,
       name: "Case Studies",
-      href: "/al",
+      href: "/case-study",
     },
     {
       id: 2,
       name: "Testimonials",
-      href: "/ashd",
+      href: "/",
     },
     {
       id: 3,
       name: "FAQ",
-      href: "/ajshd",
+      href: "/faq",
     },
   ];
 
@@ -39,9 +39,11 @@ const Header = () => {
         <div className="lg:hidden">
           <MobileMenu />
         </div>
-        <h2 className="text-2xl font-semibold">
-          Rev<span className="text-purple-600">V</span>Trex
-        </h2>
+        <Link href="/">
+          <h2 className="text-2xl font-semibold">
+            Rev<span className="text-purple-600">V</span>Trex
+          </h2>
+        </Link>
       </div>
       <nav className="hidden md:flex items-center space-x-8">
         {links.map((item) => (

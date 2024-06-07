@@ -13,12 +13,12 @@ const MobileMenu = () => {
     {
       id: 0,
       name: "Why Us",
-      href: "/",
+      href: "/why-us",
     },
     {
       id: 1,
       name: "Case Studies",
-      href: "/al",
+      href: "/case-study",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const MobileMenu = () => {
     {
       id: 3,
       name: "FAQ",
-      href: "/ajshd",
+      href: "/faq",
     },
   ];
   return (
