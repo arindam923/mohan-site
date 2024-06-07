@@ -8,8 +8,10 @@ import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Agency Website",
-  description: "We make your dream come true",
+  title:
+    "MDallTechSolution - Best Web Development, App Development, and DevOps Services in India",
+  description:
+    "MDallTechSolution offers top-notch web development, app development, and DevOps services in India. Our expert team provides custom solutions for your business needs.",
 };
 
 export default function RootLayout({
